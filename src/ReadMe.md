@@ -1,0 +1,2 @@
+# I left off at 1:38:00 on the video. 
+# For my database, I can use a SQL databse, or I can use mongoose or prisma. It can also be a non SQL databse. I define the resource, the meta, and that's basically it. 
