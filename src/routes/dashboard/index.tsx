@@ -26,7 +26,7 @@ export const DashboardPage = () => {
           <DashboardTotalCountCard
             resource="companys"
             isLoading={isLoading}
-            totalCount={data?.data.companys.totalCount}
+            totalCount={data?.data.companies.totalCount}
           />
         </Col>
         <Col xs={24} sm={24} xl={8}>

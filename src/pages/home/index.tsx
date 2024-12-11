@@ -17,27 +17,14 @@ export const Home = () => {
         <div>
             <Row gutter={[32, 32]}>
                 <Col xs={24} sm={24} xl={8}>
-                <DashboardTotalCountCard
-                  resource="companies"
-                  isLoading={isLoading}
-                  totalCount={data?.data.companies.totalCount}
-                />
+                DashboardTotalCountCard
                 </Col>
                 <Col xs={24} sm={24} xl={8}>
-                <DashboardTotalCountCard
-                  resource="contacts"
-                  isLoading={isLoading}
-                  totalCount={data?.data.contacts.totalCount}
-                />
+                DashboardTotalCountCard
                 </Col>
                 <Col xs={24} sm={24} xl={8}>
-                <DashboardTotalCountCard
-                  resource="deals"
-                  isLoading={isLoading}
-                  totalCount={data?.data.deals.totalCount}
-                />
+                DashboardTotalCountCard
                 </Col>
-
             </Row>
 
 
