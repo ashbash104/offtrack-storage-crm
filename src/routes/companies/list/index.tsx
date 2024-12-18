@@ -26,7 +26,7 @@ export const CompanyListPage = ({ children }: React.PropsWithChildren) => {
   const go = useGo();
 
   const { tableProps, filters } = useTable<Company, HttpError, Company>({
-    resource: "companys",
+    resource: "companies",
     onSearch: (values) => {
       return [
         {
@@ -69,12 +69,12 @@ export const CompanyListPage = ({ children }: React.PropsWithChildren) => {
           return (
             <CreateButton
               onClick={() => {
-                // modal is a opening from the url (/companys/new)
-                // to open modal we need to navigate to the create page (/companys/new)
+                // modal is a opening from the url (/companies/new)
+                // to open modal we need to navigate to the create page (/companies/new)
                 // we are using `go` function because we want to keep the query params
                 go({
                   to: {
-                    resource: "companys",
+                    resource: "companies",
                     action: "create",
                   },
                   options: {
@@ -93,19 +93,19 @@ export const CompanyListPage = ({ children }: React.PropsWithChildren) => {
             ...tableProps.pagination,
             pageSizeOptions: ["12", "24", "48", "96"],
             showTotal: (total) => (
-              <PaginationTotal total={total} entityName="companys" />
+              <PaginationTotal total={total} entityName="companies" />
             ),
           }}
           rowKey="id"
         >
           <Table.Column<Company>
             dataIndex="name"
-            title="Company title"
+            title="Customer Name"
             defaultFilteredValue={getDefaultFilter("id", filters)}
             filterIcon={<SearchOutlined />}
             filterDropdown={(props) => (
               <FilterDropdown {...props}>
-                <Input placeholder="Search Company" />
+                <Input placeholder="Search Customer" />
               </FilterDropdown>
             )}
             render={(_, record) => {
@@ -129,7 +129,7 @@ export const CompanyListPage = ({ children }: React.PropsWithChildren) => {
           />
           <Table.Column<Company>
             dataIndex={"totalRevenue"}
-            title="Open deals amount"
+            title="Customer Balance?"
             render={(_, company) => {
               return (
                 <Text>
