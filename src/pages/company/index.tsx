@@ -19,6 +19,13 @@ import { Text } from "../../components/text";
 import { CustomAvatar } from "../../components/custom-avatar";
 import { ContactStatusTag } from "../../components/tags/contact-status-tag";
 
+export const CompanyList = () => {
+  return (
+    <div>CompanyList</div>
+  )
+}
+
+
 type Contact = GetFieldsFromList<CompanyContactsTableQuery>;
 
 export const CompanyContactsTable = () => {

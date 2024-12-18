@@ -2,8 +2,8 @@ import { Card, Skeleton } from "antd"
 import { Text } from "components/text"
 import { totalCountVariants } from "../../constants";
 import { Area, AreaConfig } from "@ant-design/plots"
-console.log("#########################", totalCountVariants);
-console.log("#############Companies", totalCountVariants["companies"]);
+//console.log("#########################", totalCountVariants);
+//console.log("#############Companies", totalCountVariants["companies"]);
 
 
 type Props = {
@@ -35,24 +35,27 @@ const DashboardTotalCountCard = ({ resource, isLoading, totalCount }: Props) => 
     };
 
     return (
-        <Card style={{ height: "auto", padding: 0 }} bodyStyle={{ padding: '12px' }} size="small">
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+        <Card style={{ height: "96px", padding: 0 }} bodyStyle={{ padding: '8px 8px 8px 12px' }} size="small">
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', whiteSpace: 'nowrap'}}>
                 {icon && <div>{icon}</div>}
-                <div>{title}</div>
+                <Text size="md" className="secondary" style={{marginLeft: '8px'}}>
+                  {title}
+                </Text>
             </div>
-            <div style={{ marginTop: '8px' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between'}}>
+              <Text size="xxxl" strong style={{flex: 1, whiteSpace: 'nowrap', flexShrink: 0, textAlign: 'start', marginLeft: '48px', fontVariantNumeric: 'tabular-nums'}}>
                 {isLoading ? (
-                    <Skeleton.Button style={{ width: '74px' }} />
-                ) : (
-                    <div>{totalCount}</div>
+                    <Skeleton.Button style={{ marginTop: '8px', width: '74px' }} />
+                  ) : (
+                    totalCount
                 )}
+              </Text>
+              <Area {...config} style={{width: '50%'}}/>
             </div>
-            <div style={{ marginTop: '16px' }}>
-                <Area {...config} />
-            </div>
+            
         </Card>
-    );
-};
+    )
+}
 
 
 export default DashboardTotalCountCard
