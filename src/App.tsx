@@ -68,7 +68,7 @@ function App() {
                   </Authenticated>
                   }>
                     <Route index element={<Home/>} />
-                    <Route path="/companies" element={<CompanyListPage/>}/>
+                    <Route path="/customers" element={<CompanyListPage/>}/>
                     <Route path="new" element={<CompanyCreatePage/>} />
                     <Route path="edit/:id" element={<CompanyEditPage/>} />
                     <Route path="/tasks" element={<TasksListPage/>} />
