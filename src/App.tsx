@@ -69,6 +69,12 @@ function App() {
                   }>
                     <Route index element={<Home/>} />
                     <Route path="/companies" element={<CompanyListPage/>}/>
+                    <Route path="new" element={<CompanyCreatePage/>} />
+                    <Route path="edit/:id" element={<CompanyEditPage/>} />
+                    <Route path="/tasks" element={<TasksListPage/>} />
+                    <Route path="new" element={<TasksCreatePage/>} />
+                    <Route path="edit" element={<TasksCreatePage/>} />
+
                 </Route>
               </Routes>
               <UnsavedChangesNotifier />
