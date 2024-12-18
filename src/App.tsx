@@ -68,6 +68,7 @@ function App() {
                   </Authenticated>
                   }>
                     <Route index element={<Home/>} />
+                    <Route path="/companies" element={<CompanyListPage/>}/>
                 </Route>
               </Routes>
               <UnsavedChangesNotifier />

@@ -10,4 +10,4 @@ import { DealsChart } from "./home/deals-chart";
 import { UpcomingEvents } from "./home/upcoming-events";
 import { UpcomingEventsSkeleton } from "./skeleton/upcoming-events";
 export { UpcomingEvents, DealsChart, UpcomingEventsSkeleton, DashboardTotalCountCard };
-import DashboardTotalCountCard from "./home/total-card-count";
+import DashboardTotalCountCard from "./home/total-count-card";

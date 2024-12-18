@@ -4,3 +4,4 @@ import { Register } from "./register";
 import { ForgotPassword } from "./forgotPassword";
 
 export { Home, Login, Register, ForgotPassword };
+export * from "./company";
