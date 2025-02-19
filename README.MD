@@ -40,9 +40,6 @@ While different CRM solutions exist, they may be too generic or expensive for a 
     a.	Complete when there are 3 cards at the top of the dashboard with graphs populated with sample data.
 
 
-
-## Available Scripts
-
 ### Running the development server.
 
 ```bash
