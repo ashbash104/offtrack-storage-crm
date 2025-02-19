@@ -2,7 +2,7 @@
 
 This [Refine](https://github.com/refinedev/refine) project was generated with [create refine-app](https://github.com/refinedev/refine/tree/master/packages/create-refine-app).
 
-## Getting Started
+## CRM Overview
 
 The OffTrack CRM is still in development, and will provide a centralized database for customer information, accessible through an intuitive and simple UI. Key features will include:
 1.	Customer status filters (e.g., overdue payments, pending storage drop-offs)
