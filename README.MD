@@ -2,7 +2,8 @@
 
 ### Source Files
 This [Refine](https://github.com/refinedev/refine) project was generated with [create refine-app](https://github.com/refinedev/refine/tree/master/packages/create-refine-app).
-This CRM uses open source code from [Refine's Development Team](https://github.com/refinedev/refine/tree/master/examples/app-crm-minimal).
+
+The CRM also uses open source code from [Refine's Development Team](https://github.com/refinedev/refine/tree/master/examples/app-crm-minimal).
 
 ## CRM Overview
 
