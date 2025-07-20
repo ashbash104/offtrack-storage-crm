@@ -31,7 +31,11 @@ export const CompanyCreateModal = () => {
     });
   };
 
-  const { formProps, modalProps } = useModalForm<
+  const {
+    form, // ✅ Destructure form
+    formProps,
+    modalProps,
+  } = useModalForm<
     GetFields<CreateCompanyMutation>,
     HttpError,
     GetVariables<CreateCompanyMutationVariables>
@@ -65,7 +69,7 @@ export const CompanyCreateModal = () => {
       title="Add new company"
       width={512}
     >
-      <Form {...formProps} layout="vertical">
+      <Form form={form} {...formProps} layout="vertical"> {/* ✅ Corrected */}
         <Form.Item
           label="Company name"
           name="name"
@@ -79,7 +83,7 @@ export const CompanyCreateModal = () => {
           rules={[{ required: true }]}
         >
           <Select
-            placeholder="Please sales owner user"
+            placeholder="Please select a sales owner"
             {...selectProps}
             options={
               queryResult.data?.data?.map((user) => ({

@@ -21,17 +21,16 @@ export const authProvider: AuthProvider = {
         meta: {
           variables: { email },
           rawQuery: `
-                mutation Login($email: String!) {
-                    login(loginInput: {
-                      email: $email
-                    }) {
-                      accessToken,
-                    }
-                  }
-                `,
+            mutation Login($email: String!) {
+              login(loginInput: {
+                email: $email
+              }) {
+                accessToken
+              }
+            }
+          `,
         },
       });
-
       localStorage.setItem("access_token", data.login.accessToken);
 
       return {

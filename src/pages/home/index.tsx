@@ -1,6 +1,6 @@
 import { DashboardTotalCountCard, DealsChart, UpcomingEvents } from "../../components"
 import { DashboardTotalCountsQuery } from "graphql/types"
-import { useCustom } from "@refinedev/core"
+import { useCustom } from "@refinedev/core";
 import { DASHBOARD_TOTAL_COUNTS_QUERY } from "graphql/queries"
 import {Col, Row} from "antd"
 

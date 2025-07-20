@@ -23,6 +23,7 @@ type Props = {
 
 export const AccountSettings = ({ opened, setOpened, userId }: Props) => {
   const {
+    form, // ✅ Added this
     saveButtonProps,
     formProps,
     query: queryResult,
@@ -39,6 +40,7 @@ export const AccountSettings = ({ opened, setOpened, userId }: Props) => {
       gqlMutation: UPDATE_USER_MUTATION,
     },
   });
+
   const { avatarUrl, name } = queryResult?.data?.data || {};
 
   const closeModal = () => {
@@ -96,7 +98,7 @@ export const AccountSettings = ({ opened, setOpened, userId }: Props) => {
         }}
       >
         <Card>
-          <Form {...formProps} layout="vertical">
+          <Form form={form} {...formProps} layout="vertical"> {/* ✅ Fix applied here */}
             <CustomAvatar
               shape="square"
               src={avatarUrl}

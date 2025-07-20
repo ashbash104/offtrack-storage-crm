@@ -26,6 +26,7 @@ import { UPDATE_COMPANY_MUTATION } from "./queries";
 
 export const CompanyForm = () => {
   const {
+    form, // ✅ Required for Form binding
     saveButtonProps,
     formProps,
     formLoading,
@@ -40,6 +41,7 @@ export const CompanyForm = () => {
       gqlMutation: UPDATE_COMPANY_MUTATION,
     },
   });
+
   const { avatarUrl, name } = queryResult?.data?.data || {};
 
   const { selectProps: selectPropsUsers, query: queryResultUsers } = useSelect<
@@ -61,7 +63,7 @@ export const CompanyForm = () => {
       saveButtonProps={saveButtonProps}
       breadcrumb={false}
     >
-      <Form {...formProps} layout="vertical">
+      <Form form={form} {...formProps} layout="vertical"> {/* ✅ Fixed */}
         <CustomAvatar
           shape="square"
           src={avatarUrl}
@@ -127,22 +129,10 @@ const companySizeOptions: {
   label: string;
   value: CompanySize;
 }[] = [
-  {
-    label: "Enterprise",
-    value: "ENTERPRISE",
-  },
-  {
-    label: "Large",
-    value: "LARGE",
-  },
-  {
-    label: "Medium",
-    value: "MEDIUM",
-  },
-  {
-    label: "Small",
-    value: "SMALL",
-  },
+  { label: "Enterprise", value: "ENTERPRISE" },
+  { label: "Large", value: "LARGE" },
+  { label: "Medium", value: "MEDIUM" },
+  { label: "Small", value: "SMALL" },
 ];
 
 const industryOptions: {
@@ -184,16 +174,7 @@ const businessTypeOptions: {
   label: string;
   value: BusinessType;
 }[] = [
-  {
-    label: "B2B",
-    value: "B2B",
-  },
-  {
-    label: "B2C",
-    value: "B2C",
-  },
-  {
-    label: "B2G",
-    value: "B2G",
-  },
+  { label: "B2B", value: "B2B" },
+  { label: "B2C", value: "B2C" },
+  { label: "B2G", value: "B2G" },
 ];
